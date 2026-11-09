@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Car Rental Portal - Final Demo Version
 
 Java/JSP/Servlet + PostgreSQL car rental project for Apache Tomcat 10.1.
@@ -144,3 +145,6 @@ For an existing Docker database, apply the new columns once from the project fol
 docker compose exec -T db sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB"' < database/feature_migration.sql
 docker compose up -d --build
 ```
+=======
+# Car-Rental-Portal
+>>>>>>> 82c67c632d04a8ef48231a0bffd5356934040922
