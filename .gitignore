@@ -1,0 +1,8 @@
+# Local secrets
+.env
+*.jks
+*.p12
+*.keystore
+
+# Build output
+target/

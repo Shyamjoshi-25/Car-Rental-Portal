@@ -1,0 +1,48 @@
+/* =========================================================
+   CAR RENTAL PORTAL - COLLEGE DEMO POLISH
+   Shared visual layer: cards, forms, tables, badges, focus states
+   ========================================================= */
+:root{
+  --brand:#123b6d;
+  --brand-dark:#0b294e;
+  --brand-light:#eaf3ff;
+  --text:#182235;
+  --muted:#667085;
+  --surface:#ffffff;
+  --bg:#f4f7fb;
+  --border:#e4e9f0;
+  --shadow:0 10px 30px rgba(15,35,60,.09);
+  --radius:14px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg)!important;color:var(--text)}
+button,input,select,textarea{font:inherit}
+input:focus,select:focus,textarea:focus{border-color:#3d82d6!important;box-shadow:0 0 0 3px rgba(61,130,214,.12)!important;outline:none}
+button,.btn,a.btn,.small-btn,.primary-btn,.search-btn,.cta-btn{transition:transform .18s ease,box-shadow .18s ease,background .18s ease,opacity .18s ease}
+button:hover,.btn:hover,.small-btn:hover,.primary-btn:hover,.search-btn:hover{transform:translateY(-1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(61,130,214,.28);outline-offset:2px}
+.card,.car-card,.feature-card,.review-card,.search-section,.table-card,.form-card,.auth-card{border:1px solid var(--border)!important;box-shadow:var(--shadow)!important}
+.car-card{border-radius:var(--radius)!important}
+.car-card img{transition:transform .35s ease}
+.car-card:hover img{transform:scale(1.025)}
+.status,.badge{letter-spacing:.1px}
+.available,.status.completed,.status.booked{font-weight:700}
+.empty-state{text-align:center;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:55px 25px;box-shadow:var(--shadow)}
+.page-title{letter-spacing:-.3px}
+.table-card{overflow:auto;border-radius:var(--radius)}
+table{min-width:720px}
+th{position:sticky;top:0;z-index:1}
+tbody tr{transition:background .15s ease}
+tbody tr:hover{background:#f7faff!important}
+.badge{border:1px solid rgba(0,0,0,.04)}
+.toast,.message,.alert{border-radius:10px!important}
+.navbar,.main-nav{box-shadow:0 4px 16px rgba(0,0,0,.10)}
+footer{margin-top:50px}
+@media(max-width:760px){
+  .table-card{border-radius:10px}
+  .page{padding-left:16px!important;padding-right:16px!important}
+}
+
+/* ===== College Demo Premium Polish ===== */
+.page-shell{width:min(1180px,92%);margin:34px auto 70px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--brand-light);color:var(--brand);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:28px 0 18px}.section-head h2{margin:0;color:var(--text)}.muted{color:var(--muted)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 auto 28px;max-width:1100px}.flow-step{position:relative;text-align:center;padding:13px 8px;background:#fff;border:1px solid var(--border);border-radius:12px;font-size:12px;font-weight:700;color:var(--muted)}.flow-step .dot{width:28px;height:28px;margin:0 auto 7px;border-radius:50%;display:grid;place-items:center;background:#e9eef5;color:var(--brand);font-size:12px}.flow-step.active{border-color:#b8d6f6;box-shadow:0 6px 18px rgba(18,59,109,.08);color:var(--brand)}.flow-step.active .dot{background:var(--brand);color:#fff}.flow-step.done .dot{background:#16834b;color:#fff}.flow-step:not(:last-child)::after{content:"";position:absolute;top:26px;right:-9px;width:10px;height:2px;background:#d7dee8;z-index:2}.metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.metric{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow)}.metric .label{font-size:13px;color:var(--muted);font-weight:600}.metric .value{font-size:27px;font-weight:800;margin-top:5px;color:var(--brand)}.demo-note{background:linear-gradient(135deg,#eef6ff,#fff);border:1px solid #d8e8fa;border-radius:12px;padding:16px 18px;color:#344054}.demo-note strong{color:var(--brand)}.print-only{display:none}@media(max-width:760px){.flow{grid-template-columns:1fr}.flow-step:not(:last-child)::after{display:none}.metric-strip{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}}@media print{.print-only{display:block}}

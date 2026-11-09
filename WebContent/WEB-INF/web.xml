@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Car Rental Portal</display-name>
+
+    <!-- Welcome Page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+            <secure>false</secure>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+    <!-- HTTPS is terminated by Render in production. Local Docker still provides an HTTPS connector on port 8443. -->
+
+    <!-- Explicit mappings ensure customer-care endpoints are registered reliably. -->
+    <servlet><servlet-name>SupportServlet</servlet-name><servlet-class>controller.SupportServlet</servlet-class></servlet>
+    <servlet-mapping><servlet-name>SupportServlet</servlet-name><url-pattern>/support</url-pattern></servlet-mapping>
+    <servlet><servlet-name>AdminSupportServlet</servlet-name><servlet-class>controller.AdminSupportServlet</servlet-class></servlet>
+    <servlet-mapping><servlet-name>AdminSupportServlet</servlet-name><url-pattern>/admin-support</url-pattern></servlet-mapping>
+
+</web-app>

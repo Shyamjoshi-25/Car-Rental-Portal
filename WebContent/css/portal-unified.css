@@ -1,0 +1,97 @@
+/* Car Rental Portal - shared visual layer for every JSP page */
+:root{--crp-ink:#15243a;--crp-muted:#66758b;--crp-primary:#124d86;--crp-primary-dark:#0a3159;--crp-accent:#2f8de4;--crp-line:#e1e8f0;--crp-surface:#fff;--crp-page:#f4f7fb;--crp-radius:16px;--crp-shadow:0 12px 32px rgba(21,48,82,.09)}
+html{scroll-behavior:smooth}body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--crp-ink);background:var(--crp-page)}
+body:has(.wrap),body:has(.admin-wrap),body:has(.booking-card-modern){min-height:100vh}
+a{color:var(--crp-primary);text-underline-offset:3px}a:hover{color:var(--crp-accent)}
+button,.btn,input[type=submit],input[type=button],a.button{transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+button,.btn,input[type=submit],input[type=button]{border-radius:10px;font-weight:700;cursor:pointer}
+button:hover,.btn:hover,input[type=submit]:hover,input[type=button]:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(18,77,134,.16)}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),select,textarea{max-width:100%;border:1px solid #d5dfeb;border-radius:10px;background:#fff;color:var(--crp-ink);font:inherit;outline:none;transition:border-color .15s,box-shadow .15s}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):focus,select:focus,textarea:focus{border-color:#5b9fe5;box-shadow:0 0 0 3px rgba(47,141,228,.13)}
+label{color:#34465d;font-weight:650}
+table{border-collapse:collapse}table th{background:#edf4fb;color:#173c64;font-weight:750}table td,table th{border-bottom:1px solid var(--crp-line)}
+.card,.panel,.stat-card,.booking-card-modern,.booking-form-modern,.booking-summary,.wrap>.card,.wrap>section.card{border-radius:var(--crp-radius);box-shadow:var(--crp-shadow)}
+/* Consistent navigation regardless of each page's original class name */
+nav,.nav,.navbar,.crp-cars-nav{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;padding:12px 18px;background:#fff;border-bottom:1px solid var(--crp-line);box-shadow:0 5px 18px rgba(20,45,75,.045)}
+nav a,.nav a,.navbar a,.crp-cars-nav a{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border-radius:9px;color:#31445b;text-decoration:none;font-size:.94rem;font-weight:650;transition:background .18s,color .18s}
+nav a:hover,.nav a:hover,.navbar a:hover,.crp-cars-nav a:hover,nav a.active,.nav a.active,.navbar a.active,.crp-cars-nav a.active{background:#eaf3fd;color:var(--crp-primary)}
+header.top,.top-header,.main-header,.crp-cars-header{color:#fff}
+.wrap{width:min(1080px,94%);margin:34px auto;padding:clamp(16px,3vw,28px)}
+.wrap>h1,main>h1{letter-spacing:-.035em;line-height:1.15}
+@media(max-width:700px){nav,.nav,.navbar,.crp-cars-nav{justify-content:flex-start;gap:4px;padding:9px 10px}nav a,.nav a,.navbar a,.crp-cars-nav a{padding:9px 10px;font-size:.88rem}.wrap{width:auto;margin:16px auto;padding:16px}.wrap>h1,main>h1{font-size:clamp(1.7rem,7vw,2.3rem)}table{min-width:620px}body{overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* ==========================================================
+   CRP UI CONSISTENCY LAYER — shared across all JSP screens
+   Loaded last so legacy page styles remain predictable.
+   ========================================================== */
+:root {
+  --crp-ink: #17263c;
+  --crp-muted: #66758b;
+  --crp-primary: #124d86;
+  --crp-primary-dark: #0a3159;
+  --crp-accent: #2f8de4;
+  --crp-line: #dfe7f1;
+  --crp-surface: #ffffff;
+  --crp-page: #f4f7fb;
+  --crp-radius: 14px;
+  --crp-shadow: 0 10px 28px rgba(21, 48, 82, .085);
+}
+html { scroll-behavior: smooth; }
+body {
+  color: var(--crp-ink);
+  background-color: var(--crp-page);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+img, video, iframe { max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button, .btn, a.button, input[type="submit"], input[type="button"] {
+  border-radius: 9px;
+  font-weight: 650;
+  transition: background-color .18s ease, border-color .18s ease,
+              box-shadow .18s ease, transform .18s ease;
+}
+button:hover, .btn:hover, a.button:hover,
+input[type="submit"]:hover, input[type="button"]:hover {
+  box-shadow: 0 5px 14px rgba(18, 77, 134, .14);
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+select, textarea {
+  max-width: 100%;
+  border: 1px solid #d5dfeb;
+  border-radius: 9px;
+  color: var(--crp-ink);
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #5b9fe5;
+  box-shadow: 0 0 0 3px rgba(47, 141, 228, .13);
+}
+label { font-weight: 600; }
+table { border-collapse: collapse; }
+table th { font-weight: 700; }
+.card, .panel, .stat-card, .booking-card-modern,
+.booking-form-modern, .booking-summary {
+  border-radius: var(--crp-radius);
+  box-shadow: var(--crp-shadow);
+}
+.alert, .message, .error, .success { overflow-wrap: anywhere; }
+a { text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid rgba(47,141,228,.55); outline-offset: 2px; }
+@media (max-width: 760px) {
+  img { height: auto; }
+  .wrap, .container, .main-container {
+    max-width: 100%;
+  }
+  table { max-width: 100%; }
+  body { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

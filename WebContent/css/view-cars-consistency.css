@@ -1,0 +1,66 @@
+/* View Cars page: align its shell with the shared portal UI. */
+body.crp-cars-page { background: #f4f7fb; color: #17263c; }
+.crp-viewcars-header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px clamp(18px, 5vw, 72px);
+  background: linear-gradient(120deg, #073b73 0%, #0b5b9f 65%, #1676bd 100%);
+  color: #fff;
+}
+.crp-viewcars-header .logo-area h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(23px, 3vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.crp-viewcars-header .logo-area p {
+  margin: 7px 0 0;
+  color: #dbeafe;
+  font-size: 13px;
+}
+.crp-viewcars-header-tag {
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+.crp-viewcars-nav {
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px clamp(10px, 3vw, 28px);
+  background: #fff;
+  border-bottom: 1px solid #dfe7f1;
+  box-shadow: 0 5px 18px rgba(20,45,75,.045);
+}
+.crp-viewcars-nav a {
+  color: #31445b;
+  border-radius: 9px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.crp-viewcars-nav a.active,
+.crp-viewcars-nav a:hover {
+  background: #eaf3fd;
+  color: #124d86;
+}
+.crp-cars-main { max-width: 1180px; }
+.crp-cars-intro h2 { letter-spacing: -.035em; }
+.crp-fleet-card { border-color: #dfe7f1; }
+.crp-cars-footer { margin-top: 30px; }
+@media (max-width: 680px) {
+  .crp-viewcars-header { align-items: flex-start; flex-direction: column; gap: 12px; padding: 18px 16px; }
+  .crp-viewcars-header-tag { padding: 7px 10px; }
+  .crp-viewcars-nav { justify-content: flex-start; padding: 9px 10px; }
+  .crp-viewcars-nav a { padding: 9px 10px; font-size: 12px; }
+}

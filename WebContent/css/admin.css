@@ -1,0 +1,26 @@
+/* =========================================================
+   CAR RENTAL PORTAL - ADMIN THEME
+   ========================================================= */
+:root{--brand:#123b6d;--dark:#0b294e;--bg:#f4f7fb;--text:#182235;--muted:#667085;--border:#e3e8ef;--success:#16834b;--danger:#c93636;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.5}
+a{text-decoration:none}
+header{background:linear-gradient(135deg,var(--brand),var(--dark));color:#fff;text-align:center;padding:28px 20px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+header h1{font-size:30px;margin-bottom:4px}
+header p{opacity:.86}
+nav{background:#102d4f;padding:0 15px;text-align:center;display:flex;justify-content:center;flex-wrap:wrap;gap:3px;box-shadow:0 4px 14px rgba(0,0,0,.10)}
+nav a{color:#fff;padding:15px 18px;font-size:15px;font-weight:600;border-bottom:3px solid transparent}
+nav a:hover{background:rgba(255,255,255,.05);border-bottom-color:#71b3ff;color:#fff}
+.container{width:min(94%,1250px);margin:32px auto}
+.card{display:inline-flex;vertical-align:top;width:calc(25% - 22px);min-height:180px;background:#fff;margin:10px;padding:24px;text-align:center;border-radius:14px;border:1px solid var(--border);box-shadow:0 8px 25px rgba(15,35,60,.08);flex-direction:column;justify-content:center}
+.card h2,.card h3{color:var(--brand);margin-bottom:8px;font-size:26px}.card p{color:var(--muted);margin-bottom:14px}
+.btn{display:inline-block;padding:10px 17px;color:#fff;background:var(--brand);border:0;border-radius:7px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(18,59,109,.16)}
+.btn:hover{background:#0d315b;transform:translateY(-1px)}
+.edit{background:#16834b}.edit:hover{background:#116b3d}.delete,.cancel{background:#c93636}.delete:hover,.cancel:hover{background:#a92d2d}.approve{background:#16834b}.approve:hover{background:#116b3d}
+form{background:#fff;padding:24px;border-radius:14px;margin-bottom:28px;border:1px solid var(--border);box-shadow:0 8px 25px rgba(15,35,60,.08)}
+label{font-weight:650;color:#273449;display:block}input,select,textarea{width:100%;padding:11px 12px;margin:7px 0 15px;border:1px solid #ccd5e1;border-radius:8px;background:#fff}input[type=submit]{background:var(--brand);color:#fff;border:none;cursor:pointer;font-weight:650}input[type=submit]:hover{background:#0d315b}
+.table-wrap{overflow:auto;border-radius:14px;box-shadow:0 8px 25px rgba(15,35,60,.08)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:760px}th,td{border-bottom:1px solid #e8edf3;border-left:0;border-right:0;padding:13px 14px;text-align:center}th{background:var(--dark);color:#fff;position:sticky;top:0}tr:nth-child(even){background:#fafbfd}tr:hover{background:#f2f7fd}
+footer{background:var(--dark);color:#fff;text-align:center;padding:18px;margin-top:40px}
+@media(max-width:1050px){.card{width:calc(50% - 22px)}}
+@media(max-width:650px){.card{width:100%;margin:8px 0}.container{width:94%}nav a{padding:12px 9px;font-size:13px}}

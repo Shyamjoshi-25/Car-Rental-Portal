@@ -1,0 +1,47 @@
+/* Shared visual and responsive repair. Loaded last to resolve conflicting legacy overrides. */
+:root { --crp-repair-page:#f3f7fc; --crp-repair-ink:#17263c; --crp-repair-line:#dce5f0; }
+html { min-height:100%; }
+body { box-sizing:border-box; min-height:100vh; width:100%; max-width:100%; margin:0; color:var(--crp-repair-ink); }
+*, *::before, *::after { box-sizing:border-box; }
+/* Standard page canvas; preserve landing-page hero imagery and page-specific backgrounds. */
+body:not(:has(.hero)):not(:has(.hero-section)):not(:has(.landing-hero)):not(:has(.crp-cars-page)):not(:has(.cars-modern-page)) { background-color:var(--crp-repair-page) !important; }
+/* Shared content surfaces */
+.card, .panel, .stat-card, .content-card, .container-card, .booking-card, .booking-card-modern, .booking-form-modern, .table-card, .profile-card, .form-card {
+  max-width:100%;
+}
+img, video, iframe, canvas, svg { max-width:100%; }
+table { max-width:100%; }
+.table-responsive, .table-card, .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+input, select, textarea, button { max-width:100%; }
+/* Mobile layout safeguards without replacing page-specific colours or typography. */
+@media (max-width: 768px) {
+  body { overflow-x:hidden; }
+  main, .main-content, .container, .content, .dashboard-content, .admin-wrap, .wrap, .crp-cars-main { width:auto; max-width:100%; }
+  .container, .main-content, .content, .dashboard-content, .admin-wrap, .wrap { margin-left:auto; margin-right:auto; padding-left:14px; padding-right:14px; }
+  .row, .cards, .card-grid, .stats-grid, .dashboard-cards { flex-wrap:wrap; }
+  .row > *, .cards > *, .card-grid > *, .stats-grid > *, .dashboard-cards > * { min-width:0; }
+  form { max-width:100%; }
+  input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]), select, textarea { width:100%; min-width:0; }
+  table { display:block; width:100%; overflow-x:auto; white-space:normal; }
+  h1 { overflow-wrap:anywhere; }
+}
+@media (max-width: 480px) {
+  .container, .main-content, .content, .dashboard-content, .admin-wrap, .wrap { padding-left:10px; padding-right:10px; }
+  th, td { padding:8px; }
+  .btn, button, input[type=submit], input[type=button] { max-width:100%; }
+}
+/* Navigation hover/focus contrast fix: keep labels readable when the pointer moves over tabs. */
+nav a:hover, nav a:focus, nav a:focus-visible, nav a:active,
+.nav a:hover, .nav a:focus, .nav a:focus-visible, .nav a:active,
+.navbar a:hover, .navbar a:focus, .navbar a:focus-visible, .navbar a:active,
+.about-nav-modern a:hover, .about-nav-modern a:focus, .about-nav-modern a:focus-visible,
+.crp-cars-nav a:hover, .crp-cars-nav a:focus, .crp-cars-nav a:focus-visible,
+.crp-viewcars-nav a:hover, .crp-viewcars-nav a:focus, .crp-viewcars-nav a:focus-visible {
+  color: #123b6d !important;
+  background-color: #e6f1ff !important;
+  text-decoration: none;
+  opacity: 1 !important;
+}
+nav a, .nav a, .navbar a, .about-nav-modern a, .crp-cars-nav a, .crp-viewcars-nav a {
+  text-shadow: none;
+}

@@ -1,0 +1,323 @@
+:root{
+  --mp-navy:#073b73;
+  --mp-navy2:#062a4f;
+  --mp-blue:#1478e8;
+  --mp-blue2:#0d5fc7;
+  --mp-bg:#f4f8fd;
+  --mp-card:#ffffff;
+  --mp-text:#172033;
+  --mp-muted:#667085;
+  --mp-border:#dfe7f1;
+  --mp-soft:#eef5ff;
+  --mp-shadow:0 16px 42px rgba(17,45,78,.11);
+}
+
+body{font-family:"Segoe UI",Arial,sans-serif!important;background:linear-gradient(180deg,#f7fbff 0,#f2f7fc 100%)!important;color:var(--mp-text)!important;}
+body:has(.main-header),body:has(.top-header),body:has(.cars-modern-page),body:has(.auth-layout-page),body:has(.about-page-modern),body:has(.booking-modern){background:var(--mp-bg)!important;}
+
+/* Generic legacy header/nav pages: profile, details, payments, admin tools. */
+body > header:not(.main-header):not(.top-header):not(.cars-modern-header):not(.about-header-modern),
+body > .top,
+body > .topbar,
+body > .top-bar{
+  background:linear-gradient(135deg,var(--mp-navy),#0b5b9f)!important;
+  color:#fff!important;
+  padding:20px clamp(16px,5vw,72px)!important;
+  min-height:76px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:5px!important;
+  border:0!important;
+  box-shadow:0 7px 22px rgba(17,45,78,.12)!important;
+}
+body > header:not(.main-header):not(.top-header):not(.cars-modern-header):not(.about-header-modern) h1,
+body > .top h1,body > .topbar h1,body > .top-bar h1{
+  color:#fff!important;margin:0!important;font-size:clamp(25px,4vw,34px)!important;line-height:1.1!important;text-align:center!important;
+}
+body > header:not(.main-header):not(.top-header):not(.cars-modern-header):not(.about-header-modern) h3,
+body > .top p,body > .topbar p,body > .top-bar p{
+  color:#dbeafe!important;margin:0!important;font-size:14px!important;text-align:center!important;
+}
+
+body > nav:not(.main-nav):not(.cars-modern-nav):not(.navbar):not(.about-nav-modern),
+body > .nav,
+body > .topbar nav{
+  background:#fff!important;
+  color:var(--mp-text)!important;
+  min-height:58px!important;
+  padding:8px clamp(10px,4vw,56px)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-wrap:wrap!important;
+  gap:6px!important;
+  border-bottom:1px solid var(--mp-border)!important;
+  box-shadow:0 5px 20px rgba(17,45,78,.07)!important;
+  overflow-x:auto!important;
+}
+body > nav:not(.main-nav):not(.cars-modern-nav):not(.navbar):not(.about-nav-modern) a,
+body > .nav a,
+body > .topbar nav a{
+  color:var(--mp-text)!important;
+  text-decoration:none!important;
+  font-weight:700!important;
+  font-size:13px!important;
+  padding:10px 13px!important;
+  border-radius:10px!important;
+  white-space:nowrap!important;
+}
+body > nav:not(.main-nav):not(.cars-modern-nav):not(.navbar):not(.about-nav-modern) a:hover,
+body > .nav a:hover,
+body > .topbar nav a:hover{background:var(--mp-soft)!important;color:var(--mp-blue)!important;}
+
+/* Generic page shells */
+body > .wrap,
+body > .container,
+body > .box,
+body > .page,
+body > .profile-container,
+body > .admin-wrap,
+body > main.admin-wrap,
+body > .receipt,
+body > .agreement{
+  width:min(1180px,calc(100% - 32px))!important;
+  margin:30px auto!important;
+  background:#fff!important;
+  border:1px solid var(--mp-border)!important;
+  border-radius:20px!important;
+  box-shadow:var(--mp-shadow)!important;
+}
+body > .wrap,body > .page,body > .admin-wrap,body > main.admin-wrap{padding:26px!important;}
+body > .box{max-width:560px!important;padding:30px!important;}
+body > .container{padding:28px!important;}
+body > .profile-container{padding:28px!important;}
+
+/* Admin dashboard uses plain header/nav tags. */
+body:has(.admin-wrap) > header{align-items:flex-start!important;padding-left:6%!important;padding-right:6%!important;text-align:left!important;}
+body:has(.admin-wrap) > header h1{text-align:left!important;}
+body:has(.admin-wrap) > nav{justify-content:flex-start!important;}
+.admin-wrap{width:min(1200px,92%)!important;}
+.stat-grid{gap:18px!important;}
+.stat-card,.panel{background:#fff!important;border:1px solid var(--mp-border)!important;border-radius:17px!important;box-shadow:var(--mp-shadow)!important;}
+.stat-card{padding:20px!important;}
+.stat-card .value{color:var(--mp-navy)!important;}
+.panel{padding:22px!important;}
+.panel h3{color:var(--mp-navy)!important;}
+.quick a{background:#f9fbff!important;border:1px solid var(--mp-border)!important;color:var(--mp-navy)!important;border-radius:11px!important;}
+.quick a:hover{background:var(--mp-soft)!important;}
+
+/* Cards and form sections */
+.form,.tablebox,.payment-card,.summary,.receipt,.booking-card,.profile-card,.card,.detail-box,.section,.declaration,.txn,.info,.overview-box,.overview{background:#fff!important;border:1px solid var(--mp-border)!important;}
+.form,.tablebox,.payment-card,.booking-card,.profile-card,.card{border-radius:17px!important;box-shadow:var(--mp-shadow)!important;}
+.form,.tablebox{padding:22px!important;margin-bottom:20px!important;}
+form input,form select,form textarea,
+body > .container input,body > .container select,body > .container textarea,
+.grid input,.grid select{
+  border:1px solid #d5e0ec!important;border-radius:11px!important;background:#fff!important;color:var(--mp-text)!important;min-height:46px!important;padding:11px 13px!important;
+}
+form input:focus,form select:focus,form textarea:focus,.grid input:focus,.grid select:focus{border-color:var(--mp-blue)!important;box-shadow:0 0 0 4px rgba(20,120,232,.10)!important;outline:none!important;}
+
+button,.btn,.button,input[type=submit],input[type=button]{
+  background:linear-gradient(135deg,var(--mp-blue),var(--mp-blue2))!important;
+  color:#fff!important;border:0!important;border-radius:10px!important;padding:10px 15px!important;font-weight:700!important;box-shadow:0 8px 18px rgba(20,120,232,.15)!important;
+}
+button:hover,.btn:hover,.button:hover,input[type=submit]:hover,input[type=button]:hover{transform:translateY(-1px)!important;filter:brightness(1.02);}
+.danger,.delete,.cancel{background:#d92d20!important;box-shadow:none!important;}
+.deliver,.green-btn{background:#16834b!important;}
+
+/* Tables */
+body table{width:100%!important;border-collapse:separate!important;border-spacing:0!important;border:1px solid var(--mp-border)!important;border-radius:13px!important;overflow:hidden!important;background:#fff!important;}
+body table th{background:linear-gradient(135deg,var(--mp-navy),#0b5b9f)!important;color:#fff!important;padding:12px 11px!important;border:0!important;font-size:13px!important;white-space:nowrap!important;}
+body table td{padding:11px!important;border-top:1px solid var(--mp-border)!important;background:#fff!important;color:var(--mp-text)!important;vertical-align:middle!important;}
+body table tr:hover td{background:#f8fbff!important;}
+.tablebox,.table-card,.table-wrap,.wrap{overflow-x:auto!important;}
+
+/* Messages and status */
+.err,.error{background:#fff1f0!important;color:#b42318!important;border:1px solid #ffd1cc!important;border-radius:11px!important;padding:12px 14px!important;}
+.msg,.success{background:#eefbf5!important;color:#087443!important;border:1px solid #bfe8d2!important;border-radius:11px!important;padding:12px 14px!important;}
+.note,.info{background:#f5f9ff!important;color:#475467!important;border:1px solid #d7e7f8!important;border-radius:12px!important;padding:14px!important;}
+
+/* Admin login */
+body:has(.box) > .box{max-width:470px!important;margin:70px auto!important;padding:34px!important;}
+body:has(.box) > .box h2{font-size:28px!important;color:var(--mp-navy)!important;text-align:center!important;margin-top:0!important;}
+.links{text-align:center!important;margin-top:20px!important;}
+.links a{color:var(--mp-blue)!important;text-decoration:none!important;font-weight:700!important;}
+
+/* Profile */
+.profile-container{max-width:760px!important;}
+.profile-card{padding:32px!important;}
+.profile-icon{background:linear-gradient(135deg,var(--mp-blue),var(--mp-navy))!important;box-shadow:0 10px 24px rgba(20,120,232,.2)!important;}
+.profile-card h2{color:var(--mp-navy)!important;}
+.profile-info{background:#f7faff!important;border:1px solid var(--mp-border)!important;border-left:4px solid var(--mp-blue)!important;border-radius:11px!important;}
+.profile-info strong{color:var(--mp-navy)!important;}
+footer{background:linear-gradient(135deg,var(--mp-navy),#0b5b9f)!important;color:#fff!important;padding:18px!important;margin-top:40px!important;}
+
+/* Edit profile */
+body:has(.form-group) > .container{max-width:720px!important;}
+body:has(.form-group) > .container .card{padding:32px!important;}
+body:has(.form-group) .subtitle{color:var(--mp-muted)!important;}
+body:has(.form-group) .email-note{color:var(--mp-muted)!important;font-size:12px!important;}
+body:has(.form-group) .buttons{display:flex!important;gap:10px!important;}
+body:has(.form-group) .cancel-btn{background:#eef2f7!important;color:#344054!important;box-shadow:none!important;}
+
+/* Payment and receipt pages */
+.summary,.txn{border-radius:14px!important;padding:18px!important;box-shadow:none!important;}
+.txn{background:#f4f9ff!important;border:1px dashed #8fb6de!important;}
+.txn strong{color:var(--mp-navy)!important;}
+.receipt{max-width:780px!important;overflow:hidden!important;padding:0!important;}
+.receipt .success{border:0!important;border-radius:0!important;padding:30px!important;background:linear-gradient(135deg,#eefbf5,#f7fffb)!important;}
+.receipt .content{padding:28px!important;}
+.row{border-bottom:1px solid var(--mp-border)!important;padding:13px 0!important;}
+
+/* Rental agreement */
+.top-bar{flex-direction:row!important;justify-content:space-between!important;}
+.agreement{max-width:1000px!important;padding:34px!important;}
+.agreement .header{background:linear-gradient(135deg,#f4f8fd,#eaf3ff)!important;border:1px solid var(--mp-border)!important;border-radius:16px!important;padding:22px!important;}
+.agreement .section{box-shadow:none!important;border-radius:14px!important;padding:20px!important;margin-top:18px!important;}
+.agreement .section-title{color:var(--mp-navy)!important;font-weight:800!important;border-bottom:1px solid var(--mp-border)!important;padding-bottom:10px!important;margin-bottom:12px!important;}
+.agreement .info-table{border:1px solid var(--mp-border)!important;}
+.agreement .info-table th{background:#eef5ff!important;color:var(--mp-navy)!important;}
+.agreement .info-table td{background:#fff!important;}
+.agreement .detail-box{background:#f8fbff!important;border-radius:12px!important;box-shadow:none!important;}
+.agreement .footer{background:#0a2b52!important;color:#fff!important;border-radius:12px!important;padding:16px!important;margin-top:20px!important;}
+
+/* Mobile */
+@media(max-width:768px){
+  body > header:not(.main-header):not(.top-header):not(.cars-modern-header):not(.about-header-modern),body > .top,body > .topbar,body > .top-bar{padding:16px 14px!important;min-height:68px!important;}
+  body > header:not(.main-header):not(.top-header):not(.cars-modern-header):not(.about-header-modern) h1,body > .top h1,body > .topbar h1,body > .top-bar h1{font-size:23px!important;}
+  body > nav:not(.main-nav):not(.cars-modern-nav):not(.navbar):not(.about-nav-modern),body > .nav,body > .topbar nav{justify-content:flex-start!important;flex-wrap:nowrap!important;white-space:nowrap!important;padding:7px 9px!important;}
+  body > nav:not(.main-nav):not(.cars-modern-nav):not(.navbar):not(.about-nav-modern) a,body > .nav a,body > .topbar nav a{flex:0 0 auto!important;padding:9px 11px!important;font-size:12px!important;}
+  body > .wrap,body > .container,body > .box,body > .page,body > .profile-container,body > .admin-wrap,body > main.admin-wrap,body > .receipt,body > .agreement{width:calc(100% - 18px)!important;margin:16px auto!important;border-radius:16px!important;}
+  body > .wrap,body > .page,body > .admin-wrap,body > main.admin-wrap,body > .container,body > .profile-container{padding:18px!important;}
+  body > .box{padding:22px 17px!important;}
+  body > .receipt{margin-top:16px!important;}
+  .stat-grid{grid-template-columns:1fr 1fr!important;}
+  .panel-grid{grid-template-columns:1fr!important;}
+  .quick{grid-template-columns:1fr!important;}
+  .form,.tablebox{padding:16px!important;}
+  .grid{grid-template-columns:1fr!important;}
+  .buttons{flex-direction:column!important;}
+  .profile-card{padding:22px!important;}
+  body:has(.form-group) > .container .card{padding:22px 17px!important;}
+  .receipt .content{padding:18px!important;}
+  .row{gap:12px!important;flex-wrap:wrap!important;}
+  .agreement{padding:18px!important;}
+  .agreement .agreement-details,.agreement .signatures{grid-template-columns:1fr!important;}
+  .agreement .header{padding:18px!important;}
+  .agreement .section{padding:15px!important;}
+  .top-bar{flex-direction:column!important;gap:8px!important;}
+}
+@media(max-width:430px){
+  .stat-grid{grid-template-columns:1fr!important;}
+  body > .wrap,body > .container,body > .box,body > .page,body > .profile-container,body > .admin-wrap,body > main.admin-wrap,body > .receipt,body > .agreement{width:calc(100% - 12px)!important;}
+  button,.btn,.button,input[type=submit],input[type=button]{width:100%!important;}
+}
+
+@media print{
+  body{background:#fff!important;}
+  body > nav,body > .nav,body > .topbar nav,.top-bar,.actions{display:none!important;}
+  .receipt,.agreement{box-shadow:none!important;border:0!important;width:100%!important;margin:0!important;}
+}
+
+
+/* ===== CRP FINAL MODERN V2026 OVERRIDES ===== */
+:root{--crp-primary:#0d6efd;--crp-primary-dark:#084298;--crp-navy:#073b73;--crp-ink:#172033;--crp-muted:#667085;--crp-bg:#f4f8fd;--crp-card:#fff;--crp-border:#dfe7f1;--crp-shadow:0 14px 38px rgba(16,48,84,.11)}
+html,body{width:100%!important;max-width:100%!important;min-width:0!important;overflow-x:hidden!important}
+body{font-family:"Segoe UI",Arial,sans-serif!important;background:linear-gradient(180deg,#f8fbff 0%,#f1f6fb 100%)!important;color:var(--crp-ink)!important}
+
+/* Consistent modern page chrome */
+header,.top,.topbar,.top-bar,.top-header,.cars-modern-header,.about-header-modern{
+  background:linear-gradient(135deg,#073b73 0%,#0b5b9f 100%)!important;color:#fff!important;border:0!important;
+  box-shadow:0 8px 24px rgba(9,42,77,.12)!important;
+}
+header h1,header h2,.top h1,.topbar h1,.top-bar h1,.top-header h1,.top-header h2,.brand h1,.cars-modern-header h1,.about-header-modern h1{color:#fff!important}
+
+nav,.nav,.main-nav,.navbar,.cars-modern-nav,.about-nav-modern{
+  background:#fff!important;color:var(--crp-ink)!important;border:0!important;border-bottom:1px solid var(--crp-border)!important;
+  box-shadow:0 5px 18px rgba(16,48,84,.07)!important;
+}
+nav a,.nav a,.main-nav a,.cars-modern-nav a,.about-nav-modern a{color:var(--crp-ink)!important;text-decoration:none!important;font-weight:700!important;border-radius:10px!important}
+nav a:hover,.nav a:hover,.main-nav a:hover,.main-nav a.active,.cars-modern-nav a:hover,.cars-modern-nav a.active,.about-nav-modern a:hover,.about-nav-modern a.active{background:#eaf3ff!important;color:#0d6efd!important}
+
+/* Make legacy cards/containers unmistakably modern */
+.container,.wrap,.page,.box,.profile-container,.admin-wrap,.receipt,.agreement,.form,.tablebox,.table-card,.card,.panel,.payment-card,.booking-card,.profile-card,.summary,.detail-box,.overview-box,.overview,.section,.declaration,.txn,.info{
+  background:#fff!important;border:1px solid var(--crp-border)!important;border-radius:18px!important;box-shadow:var(--crp-shadow)!important;
+}
+.container,.wrap,.page,.box,.profile-container,.admin-wrap{margin:28px auto!important}
+
+/* Form controls */
+input:not([type=hidden]),select,textarea{
+  background:#fff!important;color:var(--crp-ink)!important;border:1px solid #d5e0ec!important;border-radius:11px!important;
+  min-height:46px!important;box-shadow:none!important;
+}
+input:not([type=hidden]):focus,select:focus,textarea:focus{outline:none!important;border-color:#0d6efd!important;box-shadow:0 0 0 4px rgba(13,110,253,.10)!important}
+button,.btn,.button,input[type=submit],input[type=button],.primary-btn,.search-btn,.small-btn,.cta-btn,.save-btn,.auth-submit{
+  background:linear-gradient(135deg,#0d6efd,#0b5ed7)!important;color:#fff!important;border:0!important;border-radius:11px!important;
+  font-weight:700!important;box-shadow:0 8px 18px rgba(13,110,253,.16)!important;text-decoration:none!important;
+}
+button:hover,.btn:hover,.button:hover,input[type=submit]:hover,input[type=button]:hover,.primary-btn:hover,.search-btn:hover,.small-btn:hover,.cta-btn:hover{transform:translateY(-1px)!important}
+.danger,.delete,.cancel{background:#dc3545!important;box-shadow:none!important}
+.deliver,.green-btn{background:#198754!important;box-shadow:none!important}
+
+/* Tables */
+table{width:100%!important;border-collapse:separate!important;border-spacing:0!important;background:#fff!important;border:1px solid var(--crp-border)!important;border-radius:14px!important;overflow:hidden!important}
+th{background:linear-gradient(135deg,#073b73,#0b5b9f)!important;color:#fff!important;border:0!important}
+td{background:#fff!important;color:var(--crp-ink)!important;border-color:var(--crp-border)!important}
+tr:hover td{background:#f7fbff!important}
+
+/* Home */
+.main-header{position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:16px clamp(16px,6vw,80px)!important;min-height:74px!important}
+.main-header .logo-area h1{white-space:nowrap!important;font-size:clamp(23px,3vw,31px)!important}
+.main-header .logo-area p{color:#dbeafe!important}
+.navbar{position:relative!important;top:auto!important;right:auto!important;min-height:54px!important;padding:8px clamp(12px,5vw,64px)!important;display:flex!important;justify-content:flex-end!important;gap:6px!important}
+.navbar a{color:#172033!important}
+.hero{min-height:590px!important;padding:90px clamp(20px,7vw,100px)!important;background:linear-gradient(90deg,rgba(3,25,50,.86),rgba(3,31,62,.42),rgba(3,31,62,.12)),url('../images/hero-car-wide.jpg') center/cover no-repeat!important;color:#fff!important}
+.hero-content{max-width:650px!important;width:100%!important}
+.hero-content h2{color:#fff!important;font-size:clamp(38px,5.2vw,62px)!important}
+.hero-content p{color:#eef6ff!important}
+.search-section{width:min(1180px,calc(100% - 30px))!important;margin:-42px auto 50px!important;background:#fff!important;border:1px solid var(--crp-border)!important;border-radius:20px!important;box-shadow:0 18px 45px rgba(16,48,84,.14)!important}
+.car-card,.feature-card,.review-card,.modern-car{background:#fff!important;border:1px solid var(--crp-border)!important;border-radius:18px!important;box-shadow:var(--crp-shadow)!important;overflow:hidden!important}
+.car-card img,.modern-car-img{display:block!important;width:100%!important;object-fit:cover!important}
+
+/* Auth */
+.auth-layout-page,.auth-page{background:linear-gradient(135deg,#eef6ff,#f8fbff)!important}
+.auth-card,.auth-card-modern,.auth-card-register{background:#fff!important;border:1px solid var(--crp-border)!important;border-radius:20px!important;box-shadow:0 20px 55px rgba(16,48,84,.15)!important}
+.auth-heading,.auth-card h2{color:#073b73!important}
+.auth-mobile-brand{color:#073b73!important;font-weight:900!important}
+
+/* Dashboard */
+.top-header{min-height:82px!important}
+.main-nav{min-height:58px!important}
+.card,.overview-box,.metric,.stat-card,.panel{box-shadow:var(--crp-shadow)!important}
+
+/* Mobile */
+@media(max-width:768px){
+  .main-header{padding:14px 12px!important;display:block!important;text-align:center!important}
+  .main-header .logo-area h1{display:block!important;font-size:clamp(19px,6vw,25px)!important;white-space:nowrap!important;overflow:visible!important}
+  .main-header .logo-area p{display:none!important}
+  .navbar{justify-content:flex-start!important;overflow-x:auto!important;white-space:nowrap!important;padding:7px 10px!important;scrollbar-width:none!important}
+  .navbar::-webkit-scrollbar{display:none}
+  .navbar a{flex:0 0 auto!important;padding:9px 12px!important;font-size:12px!important}
+  .hero{min-height:610px!important;padding:180px 16px 48px!important;background:linear-gradient(180deg,rgba(2,25,53,.05),rgba(2,25,53,.20) 32%,rgba(2,25,53,.90) 65%,rgba(2,25,53,.98)),url('../images/hero-car-mobile.jpg') center/cover no-repeat!important;text-align:center!important;align-items:stretch!important}
+  .hero-content{max-width:none!important}
+  .hero-content h2{font-size:clamp(33px,10vw,46px)!important}
+  .hero-buttons{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important}
+  .search-section{width:calc(100% - 20px)!important;margin:-18px auto 30px!important;padding:17px!important}
+  .search-box{grid-template-columns:1fr!important}
+  .search-btn{width:100%!important}
+  .container,.wrap,.page,.box,.profile-container,.admin-wrap,.receipt,.agreement{width:calc(100% - 18px)!important;margin:17px auto!important;padding:18px!important}
+  table{min-width:660px!important}
+  .table-card,.tablebox{overflow-x:auto!important}
+  .grid,.register-form-grid,.booking-layout,.panel-grid,.cards,.feature-grid,.review-grid,.car-grid,.cars-modern-grid{grid-template-columns:1fr!important}
+  .buttons,.actions{flex-direction:column!important}
+  .buttons>* ,.actions>*{width:100%!important;margin:0!important}
+  .auth-card,.auth-card-modern,.auth-card-register{width:100%!important;padding:22px 17px!important}
+}
+@media(max-width:430px){
+  .main-header .logo-area h1{font-size:20px!important}
+  .hero{min-height:590px!important;padding-top:170px!important}
+  .hero-buttons{grid-template-columns:1fr!important}
+  button,.btn,.button,input[type=submit],input[type=button]{width:100%!important}
+}

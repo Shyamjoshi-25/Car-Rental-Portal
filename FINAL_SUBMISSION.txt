@@ -1,0 +1,23 @@
+CAR RENTAL PORTAL - FINAL SUBMISSION
+
+Project: Car Rental Portal
+Technology: Java 17, JSP, Servlets, PostgreSQL, Maven, Tomcat 10.1, Docker
+
+This ZIP contains the final project source, web interface, database scripts,
+Docker configuration, documentation, and run scripts.
+
+Important:
+- The local .env file is intentionally NOT included because it contains environment configuration.
+- Use .env.example as the template for local/Docker environment variables.
+- Do not commit passwords, keystores, or other secrets.
+
+Main files:
+- README.md - project setup and demo flow
+- SECURITY.md - security features
+- COLLEGE_DEMO_SETUP.md - college/demo setup
+- MOBILE_AND_DESKTOP_RUN_GUIDE.md - run guide
+- pom.xml - Maven configuration
+- Dockerfile / docker-compose.yml - Docker deployment
+- database/ - PostgreSQL scripts
+- src/ - Java source code
+- WebContent/ - JSP, CSS, JavaScript, and images
